@@ -1,11 +1,13 @@
 
+import { Link } from 'react-router-dom'
+import logo from '../../assets/aws logo.jpeg'
 const Certifications=()=>{
     return(
         <>
         <h1>Certification</h1>
         <div className="certification-card">
         <img
-            src="/path-to-your-image/aws-developer-associate.png"
+            src={logo}
             alt="AWS Certified Developer Associate"
             className="certification-image"
         />
@@ -19,8 +21,23 @@ const Certifications=()=>{
         <div className="certification-links">
             <span className="certification-badge">Certification</span>
             <span className="certification-badge">Issued: 2025</span>
+
         </div>
+
+            <div style={{marginTop:9}}>
+  <a
+    href="https://www.credly.com/badges/52747f3d-3abb-4855-97bc-c3b0b5f4f669"
+    target="_blank"
+    rel="noopener noreferrer"
+    
+  >
+    View Credential
+  </a>
+</div>
+
+
         </div>
+ 
 
 
         </>
