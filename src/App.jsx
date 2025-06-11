@@ -1,25 +1,49 @@
-import { useNavigate } from 'react-router-dom';
-import AppRoutes from './components/routes/approutes';
+import {  useNavigate } from 'react-router-dom';
+
 import './App.css';
+import Home from './components/Home/home';
+import Skills from './components/Skills/skills';
+import Education from './components/Education/education';
+import WorkExperience from './components/workexperience/workexperience';
+import Project from './components/Projects/projects';
+import Certifications from './components/Certifications/certifications';
+import ContactMe from './components/contactme/contactme';
+import { Link } from 'react-scroll';
 
 function App() {
   const navigate = useNavigate();
 
   return (
     <>
-      <div className="top-buttons">
-        <button className="home" onClick={() => navigate('/')}>Home</button>
-        <button className="skills" onClick={() => navigate('/skills')}>Skills</button>
-        <button className='Education' onClick={()=>navigate('/education')}>Education</button>
-        <button className='workexperience' onClick={()=>navigate('/workexperience')}>Work Experience</button>
-        <button className='projects' onClick={()=>navigate('/projects')}>Projects</button>
-        <button className='Certifcations' onClick={()=>navigate('/Certifications')}>Certifcations</button>
-          <button className='contactme' onClick={()=>navigate('/contactme')}>Contact-Me</button>
-      </div>
+    <nav>
+   
+        <Link className="home" to="home"  smooth={true} duration={1000}>Home</Link>
+        <Link className="skills" to="skills" smooth={true} duration={1000}>Skills</Link>
+        
+        <Link className='Education' to='education' smooth={true} duration={1000}>Education</Link>
+        <Link className='workexperience' to='workexperience'smooth={true} duration={1000}>Work Experience</Link>
+        <Link className='projects' to='projects' smooth={true} duration={1000}>Projects</Link>
+        <Link className='Certifcations' to='certifcations' smooth={true} duration={1000}>Certifcations</Link>
+          <Link className='contactme' to='contactme' smooth={true} duration={1000}>Contact-Me</Link>
 
 
-      <AppRoutes />
-    </>
+</nav >
+<div className="content">
+  <section id="home" style={{ minHeight: '100vh', padding: '40px 0' }}><Home /></section>
+  <section id="skills" style={{ minHeight: '100vh', padding: '40px 0' }}><Skills /></section>
+  <section id="education" style={{
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',  // vertically center
+    justifyContent: 'flex-start', // align to left
+    padding: '0 5vw' // optional horizontal padding
+  }} className="section"><Education /></section>
+  <section id="workexperience" style={{ minHeight: '100vh', padding: '40px 0' }} ><WorkExperience /></section>
+  <section id="projects" style={{ minHeight: '100vh', padding: '40px 0' }}><Project /></section>
+  <section id="certifcations" style={{ minHeight: '100vh', padding: '40px 0' }}><Certifications /></section>
+  <section id="contactme" style={{ minHeight: '100vh', padding: '40px 0' }}><ContactMe /></section>
+</div>
+</>
   );
 }
 

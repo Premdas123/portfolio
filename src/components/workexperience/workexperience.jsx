@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import logo from '../../assets/digienablers-logo.png'; // Adjust path as needed
+import logo from '../../assets/digienablers.png'; // Adjust path as needed
 
 
 const WorkExperience=()=>{
@@ -8,11 +8,11 @@ const WorkExperience=()=>{
         <>
          <div className="experience-card">
       <div className="experience-top">
-        <div className="company-name">DigiEnablers Pvt Ltd</div>
-        {/* <div className="logo-circle">
-          <img src={logo} alt="Digi Enablers Logo" />
-        </div> */}
-      </div>
+  <div className="company-name">DigiEnablers Pvt Ltd</div>
+  <div className="logo-circle">
+    <img src={logo} alt="Digi Enablers Logo" />
+  </div>
+</div>
 
       <div className="experience-content">
         <h2>Role:FULL STACK DEVELOPER</h2>
