@@ -8,6 +8,7 @@ import WorkExperience from './components/workexperience/workexperience';
 import Project from './components/Projects/projects';
 import Certifications from './components/Certifications/certifications';
 import ContactMe from './components/contactme/contactme';
+import Signin from './components/Signin/signin';
 import { Link } from 'react-scroll';
 
 function App() {
@@ -24,8 +25,8 @@ function App() {
         <Link className='workexperience' to='workexperience'smooth={true} duration={1000}>Work Experience</Link>
         <Link className='projects' to='projects' smooth={true} duration={1000}>Projects</Link>
         <Link className='Certifcations' to='certifcations' smooth={true} duration={1000}>Certifcations</Link>
-          <Link className='contactme' to='contactme' smooth={true} duration={1000}>Contact-Me</Link>
-
+        <Link className='contactme' to='contactme' smooth={true} duration={1000}>Contact-Me</Link>
+        <Link className='signin' to='signin' smooth={true} duration={1000}>Sign-In</Link>
 
 </nav >
 <div className="content">
@@ -34,14 +35,16 @@ function App() {
   <section id="education" style={{
     minHeight: '100vh',
     display: 'flex',
-    alignItems: 'center',  // vertically center
-    justifyContent: 'flex-start', // align to left
-    padding: '0 5vw' // optional horizontal padding
+    alignItems: 'center',  
+    justifyContent: 'flex-start', 
+    padding: '0 5vw' 
   }} className="section"><Education /></section>
   <section id="workexperience" style={{ minHeight: '100vh', padding: '40px 0' }} ><WorkExperience /></section>
   <section id="projects" style={{ minHeight: '100vh', padding: '40px 0' }}><Project /></section>
   <section id="certifcations" style={{ minHeight: '100vh', padding: '40px 0' }}><Certifications /></section>
   <section id="contactme" style={{ minHeight: '100vh', padding: '40px 0' }}><ContactMe /></section>
+  <section id="signin" style={{ minHeight: '100vh', padding: '40px 0' }}><Signin/></section>
+
 </div>
 </>
   );
